@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: php-app
+    env: docker
+    plan: free
+    buildCommand: "" # Dockerfile handles the build process
+    startCommand: "" # Dockerfile handles the start process
+    envVars:
+      - key: DATABASE_URL
+        value: postgres://admin:zgn5icjdz4tfTIamfgL2hSrIZ0hRLvr7@dpg-csqqfatumphs73d6opqg-a.singapore-postgres.render.com:5432/userdata_0m9c
+      - key: APP_ENV
+        value: production
